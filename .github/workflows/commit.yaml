@@ -1,0 +1,12 @@
+name: print-commit-message
+
+on: [push]
+
+jobs:
+  print-commit-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: commit message
+        run: echo '${{ toJSON(github.event) }}'
+        shell: bash
+        
